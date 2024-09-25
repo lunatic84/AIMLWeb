@@ -106,10 +106,10 @@ sns.heatmap(corr_matrix, annot = True, cmap = "coolwarm", fmt = '.2f', linewidth
 plt.tight_layout()
 st.pyplot(plt)
 
-# # 페어플롯
-# st.subheader('Pairplot')
-# fig = sns.pairplot(df, hue = "species")
-# plt.tight_layout()
-# st.pyplot(fig)
+# 페어플롯
+st.subheader('Pairplot')
+fig = sns.pairplot(df, hue = "species")
+plt.tight_layout()
+st.pyplot(fig)
 
 
