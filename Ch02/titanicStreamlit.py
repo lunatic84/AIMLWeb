@@ -132,7 +132,8 @@ if uploadedFile is not None:
     
     ## Convert User Input to DataFrame
     inputDF = pd.DataFrame([userInput])
-    inputDF = inputDF.drop(columns=["Embarked"], axis=1, errors="ignore")
+    if "Embarked" in inputDF.columns:
+        inputDF = inputDF.drop(columns=["Embarked"], axis=1, errors='ignore')
 
     ## Convert inputDF to numpyArray and 1D array to 2D
     inputArray = np.array(inputDF.iloc[0, :])
